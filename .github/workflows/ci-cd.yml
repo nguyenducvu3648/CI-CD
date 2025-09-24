@@ -13,32 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Bước 1: Checkout mã nguồn
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Bước 2: Cài đặt Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      # Bước 3: Cài đặt dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Bước 4: Build Docker image
       - name: Build Docker image
-        run: docker build -t simple-node-app .
+        run: docker build -t pong-game .
 
-      # Bước 5: Chạy container để test
       - name: Test Docker container
         run: |
-          docker run -d -p 3000:3000 simple-node-app
+          docker run -d -p 80:80 pong-game
           sleep 5
-          curl http://localhost:3000
+          curl http://localhost
 
-      # Bước 6: Deploy lên Vercel
       - name: Deploy to Vercel
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}

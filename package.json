@@ -1,13 +1,8 @@
 {
-  "name": "simple-node-app",
+  "name": "pong-game",
   "version": "1.0.0",
-  "description": "A simple Node.js app for CI/CD with Docker and Vercel",
-  "main": "src/index.js",
+  "description": "A simple Pong game with p5.js",
   "scripts": {
-    "start": "node src/index.js"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": ">=14"
+    "start": "echo 'Static site, no server needed'"
   }
 }
