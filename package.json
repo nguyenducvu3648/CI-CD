@@ -1,12 +1,13 @@
 {
-  "name": "heroku_demo",
+  "name": "simple-node-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A simple Node.js app for CI/CD with Docker and Vercel",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
 }
