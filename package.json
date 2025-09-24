@@ -1,8 +1,0 @@
-{
-  "name": "pong-game",
-  "version": "1.0.0",
-  "description": "A simple Pong game with p5.js",
-  "scripts": {
-    "start": "echo 'Static site, no server needed'"
-  }
-}
